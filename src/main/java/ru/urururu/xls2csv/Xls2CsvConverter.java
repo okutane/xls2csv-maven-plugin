@@ -1,4 +1,4 @@
-package ru.urururu;
+package ru.urururu.xls2csv;
 
 import java.io.File;
 import java.io.FileFilter;
