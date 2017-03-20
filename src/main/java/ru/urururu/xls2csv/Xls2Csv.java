@@ -1,4 +1,4 @@
-package ru.urururu;
+package ru.urururu.xls2csv;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -15,7 +15,7 @@ import java.io.IOException;
 @Mojo(name = "xls2csv")
 public class Xls2Csv extends AbstractMojo {
     @Parameter(required = true)
-    private File targetDirectory;
+    File targetDirectory;
 
     public void execute() throws MojoExecutionException, MojoFailureException {
         try {
