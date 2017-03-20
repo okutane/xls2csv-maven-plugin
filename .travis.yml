@@ -2,6 +2,9 @@ language: java
 jdk: oraclejdk8
 after_success: bash <(curl -s https://codecov.io/bash)
 
+before_deploy: [ -z $TRAVIS_TAG ] mvn org.codehaus.mojo:versions-maven-plugin:2.3:set -DnewVersion=$TRAVIS_TAG
+deploy: mvn clean deploy --settings settings.xml
+
 env:
   global:
   - secure: iIYUWwqjtR4lpT7ediAOQ+2Gxn6dnuZ6SB9FL8EzsSqOpRWKFf2991mBVv12ZWsLV1kY+JeqKpP8MPPMGYhyzTB4gNQnelUWC394Ng96L78UTlLYrgF52eFdJ5SAgJzScgNskVb45iFfVHsbrrFjp1MPPGn27KNd/hWqtl5rk/U1C+xpsicPOoZCzLGElsip4NDTfloR4L4WylPSwnmJIFzf2lz6HNMPJ+HtruMzGgq2foZHpT1KsnB68FfbT2uO0wcSKg9IzgzpwPGDb7Ayiv9k8WLC/R/fSrY0pp4vSfGMOXa0+jI0b+5mHlCmbNK6qSwOQ9maiNIo+j2/VAZ9wCe7YYAP0x++Y9lQcoHKqcBn5dsU4DMuyzgyFqSop9aOl7KcRajG8oDX6Uui5Jc+XiGLUC+MU8a86wvm2Jk/Nd+NRwkg7zJTUx37Gal4FBg5g0Qk7GVJaicai4igiZo97S2/mPYBdz/HGVkhKAaChcXBLC+x+ME3ZjaCAlqx/rySvcGcEcp0oFeHVU5Wv2bAXcgUS2aw7XOt6nCYDCprTtWpq800n6Ke1DKAmynvA0vyACirExqaQTkrMoMHQTSB5lMz7DlD8diB5tUGsjsQr36XHZlKbQf413vt6qOOatNod+ZVqNWB2mrzhUw2gSdu1f0T6DZZwSn8dFS1SUsgEnI=
