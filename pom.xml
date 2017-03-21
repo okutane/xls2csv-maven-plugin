@@ -4,10 +4,11 @@
 
   <groupId>ru.urururu</groupId>
   <artifactId>xls2csv-maven-plugin</artifactId>
-  <version>0.9-SNAPSHOT</version>
+  <version>v0.9.1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>xls2csv Maven Plugin</name>
+  <description>A plugin to convert .XLS files to .CSV during build</description>
   <url>https://github.com/okutane/xls2csv-maven-plugin</url>
 
   <licenses>
@@ -17,6 +18,14 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+
+  <developers>
+    <developer>
+      <id>okutane</id>
+      <name>Dmitry Matveev</name>
+      <email>dmitriy.g.matveev@gmail.com</email>
+    </developer>
+  </developers>
 
   <scm>
     <url>https://github.com/okutane/xls2csv-maven-plugin</url>
@@ -98,6 +107,7 @@
               <goal>descriptor</goal>
             </goals>
           </execution>
+
           <execution>
             <id>help-goal</id>
             <goals>
@@ -113,6 +123,21 @@
         <configuration>
           <additionalparam>-Xdoclint:none</additionalparam> <!-- Maven complains about helpmojo -->
         </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.5</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
 
       <plugin>
