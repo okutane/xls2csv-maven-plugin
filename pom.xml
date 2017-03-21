@@ -10,9 +10,18 @@
   <name>xls2csv Maven Plugin</name>
   <url>https://github.com/okutane/xls2csv-maven-plugin</url>
 
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
   <scm>
     <url>https://github.com/okutane/xls2csv-maven-plugin</url>
     <connection>scm:git:https://github.com/okutane/xls2csv-maven-plugin</connection>
+    <developerConnection>scm:git:https://github.com/okutane/xls2csv-maven-plugin</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
