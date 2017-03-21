@@ -4,11 +4,17 @@
 
   <groupId>ru.urururu</groupId>
   <artifactId>xls2csv-maven-plugin</artifactId>
-  <version>0.9-SNAPSHOT</version>
+  <version>0.10-pre-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>xls2csv Maven Plugin</name>
   <url>https://github.com/okutane/xls2csv-maven-plugin</url>
+
+  <scm>
+    <url>https://github.com/okutane/xls2csv-maven-plugin</url>
+    <connection>scm:git:https://github.com/okutane/xls2csv-maven-plugin</connection>
+    <tag>HEAD</tag>
+  </scm>
 
   <distributionManagement>
     <snapshotRepository>
