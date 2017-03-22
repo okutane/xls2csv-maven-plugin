@@ -2,8 +2,8 @@ language: java
 jdk: oraclejdk8
 after_success:
  - bash <(curl -s https://codecov.io/bash)
- - if test -n "$TRAVIS_TAG"; then mvn org.codehaus.mojo:versions-maven-plugin:2.3:set -DnewVersion=$TRAVIS_TAG; fi
- - mvn clean deploy --settings settings.xml
+# - if test -n "$TRAVIS_TAG"; then mvn org.codehaus.mojo:versions-maven-plugin:2.3:set -DnewVersion=$TRAVIS_TAG; fi
+# - mvn clean deploy --settings settings.xml
 
 env:
   global:
