@@ -4,7 +4,7 @@
 
   <groupId>ru.urururu</groupId>
   <artifactId>xls2csv-maven-plugin</artifactId>
-  <version>0.9.4-SNAPSHOT</version>
+  <version>0.9.5-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>xls2csv Maven Plugin</name>
